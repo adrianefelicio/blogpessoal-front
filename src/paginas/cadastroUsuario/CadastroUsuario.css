@@ -1,12 +1,20 @@
-.text-decorator-none{
-    text-decoration: none;
-}
-
-.imagem{
+.imagem2{
     background-image: url(https://images.unsplash.com/photo-1576093742342-ae7001bdc5e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=407&q=80);
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
+}
+
+.texto2{
+    font-weight: bold !important;
+}
+
+.btnCancelar{
+    margin-right: 20px !important;
+}
+
+.text-decorator-none{
+    text-decoration: none;
 }

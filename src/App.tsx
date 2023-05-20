@@ -4,9 +4,8 @@ import './App.css';
 import Navbar from './componentes/estatico/navbar/Navbar';
 import Home from './paginas/home/Home';
 import Footer from './componentes/estatico/footer/Footer';
-import { Grid } from "@material-ui/core";
 import Login from './paginas/login/Login';
-import Cadastro from './paginas/cadastro/CadastroUsuario';
+import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 
 
 function App() {
@@ -19,7 +18,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/cadastro" element={<Cadastro/>} />
+          <Route path="/cadastrousuario" element={<CadastroUsuario/>} />
         </Routes>
     </div>
     <Footer />
