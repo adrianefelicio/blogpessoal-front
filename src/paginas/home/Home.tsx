@@ -8,7 +8,7 @@ function Home() {
       gap={4}
       alignItems={"center"}
       justifyContent={"center"}
-      style={{ backgroundColor: "#385cb1" }}
+      className="caixa"
     >
       <Grid item xs={4}>
         <Box
@@ -19,13 +19,13 @@ function Home() {
           alignItems={"center"}
           gap={2}
         >
-          <Typography align="center" fontWeight={900} variant="h3">
+          <Typography className="titulo" align="center" fontWeight={900} variant="h3">
             Bem vindo ao blog pessoal
           </Typography>
-          <Typography align="center" variant="body1">
+          <Typography className="subtitulo" align="center" variant="body1" color= 'primary'>
             Digita uns textos dahora pra nóis ai...
           </Typography>
-          <Button variant="outlined" className="outlinedButton">
+          <Button variant="outlined" className="botao">
             Ver Postagens
           </Button>
         </Box>
@@ -33,6 +33,7 @@ function Home() {
       <Grid item xs={4}>
         <img src="https://i.imgur.com/9OZAbB5.png" alt="" width={"100%"} />
       </Grid>
+      <Grid xs={12} className='postagens'> </Grid>
     </Grid>
   );
 }

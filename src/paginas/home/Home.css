@@ -1,3 +1,12 @@
+.titulo{
+  font-weight: 900px;
+  color: #385cb1;
+}
+
+.subtitulo{
+  color: #385cb1;
+}
+
 .texto {
     text-align: center;
   }
@@ -6,12 +15,23 @@
     display: flex;
   }
   
-  .outlinedButton {
-    border-color: #fff !important;
-    color: #fff !important;
+  .botao{
+    border-color: white !important;
+    background-color: #385cb1 !important;
+    color: white !important;
+  }
+
+  
+.botao:hover {
+    background-color: white!important;
+    color:#385cb1 !important
+  }
+
+  .caixa {
+    background-color: "#385cb1";
+  }
+
+  .postagens{
+    background-color: white;
   }
   
-  .outlinedButton:hover {
-    background-color: #fff !important;
-    color: #385cb1 !important
-  }
