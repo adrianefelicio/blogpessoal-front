@@ -56,7 +56,7 @@ function CadastroUsuario() {
       }
     } else {
       // aqui é a mensagem de erro para o caso dos campos de senha estarem diferentes, vai avisar, e apagar os dois campos
-      alert('Os campos de Senha e Confirmar Senha estão diferentes');
+      alert('Os dados estão incorretos');
       setUser({ ...user, senha: '' });
       setConfirmarSenha('')
     }
@@ -77,26 +77,28 @@ function CadastroUsuario() {
 
     return(
         <Grid container direction="row" justifyContent="center" alignItems="center">
-        <Grid item xs={6} className="imagem2"></Grid>
-        <Grid item xs={6}>
+        <Grid item xs={5} className="imagem2"></Grid>
+        <Grid item xs={7}>
         <Box padding={10}>
-            <form onSubmit={cadastrar}>
+            <Box className="boxcadastro">
+            <form onSubmit={cadastrar} className="formulario">
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' style={{fontWeight: 'bold'}} className="textos2">Cadastrar</Typography>
-                        <TextField value={user.nome} onChange={(event: ChangeEvent<HTMLInputElement>) => updateModel(event) } id='nome' label='nome' variant='outlined' name='nome' margin='normal' fullWidth />
-                        <TextField value={user.usuario} onChange={(event: ChangeEvent<HTMLInputElement>) => updateModel(event)} id='usuario' label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
-                        <TextField value={user.senha} onChange={(event: ChangeEvent<HTMLInputElement>) => updateModel(event)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password'fullWidth />
-                        <TextField value={confirmarSenha} onChange={(event: ChangeEvent<HTMLInputElement>) => confirmSenha(event)} id='confirmarSenha' label='confirmarSenha' variant='outlined' name='confirmarSenha' margin='normal' type='password'fullWidth />
+                        <TextField className="preencher" value={user.nome} onChange={(event: ChangeEvent<HTMLInputElement>) => updateModel(event) } id='nome' label='nome' variant='outlined' name='nome' margin='normal' fullWidth />
+                        <TextField className="preencher" value={user.usuario} onChange={(event: ChangeEvent<HTMLInputElement>) => updateModel(event)} id='usuario' label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
+                        <TextField className="preencher" value={user.senha} onChange={(event: ChangeEvent<HTMLInputElement>) => updateModel(event)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password'fullWidth />
+                        <TextField className="preencher" value={confirmarSenha} onChange={(event: ChangeEvent<HTMLInputElement>) => confirmSenha(event)} id='confirmarSenha' label='confirmar senha' variant='outlined' name='confirmarSenha' margin='normal' type='password'fullWidth />
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/login' className='text-decorator-none'>
                             <Button variant='contained' color='secondary' className="btnCancelar" onClick={voltar}>
                                     Cancelar
                                 </Button>
                             </Link>
-                            <Button type='submit' variant='contained' color='primary'>
+                            <Button type='submit' variant='contained' color='primary' className="btnCadastrar">
                                     Cadastrar
                                 </Button>
                         </Box>
             </form>
+            </Box>
         </Box>
         </Grid>
         </Grid> 

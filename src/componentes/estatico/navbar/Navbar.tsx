@@ -2,42 +2,45 @@ import React from 'react';
 import { AppBar, Toolbar, Box, Typography, Grid } from '@mui/material';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack'
+
 function Navbar() {
   return (
     <>
       <AppBar position="static" className="navbar">
         <Toolbar variant="dense">
-          <Grid container justifyContent={'space-between'}>
+          <Grid container  py={1} justifyContent={'space-between'}>
           <Box className="cursor">
-            <Typography variant="h5" color="inherit">
-              BlogPessoal
+            <Typography variant="h5" className="nomeblog" display='flex' justifyContent="unset">
+              - Primeira página logo - 
             </Typography>
           </Box>
-            <Box display="flex" justifyContent="start">
+            <Box display="flex" justifyContent="start" marginTop={1}>
               <Box mx={1} className="cursor">
                 <Typography variant="h6" color="inherit">
-                  home
+                  Home
                 </Typography>
               </Box>
             <Box mx={1} className="cursor">
               <Typography variant="h6" color="inherit">
-                postagens
+                Postagens
               </Typography>
             </Box>
             <Box mx={1} className="cursor">
               <Typography variant="h6" color="inherit">
-                temas
+                Temas
               </Typography>
             </Box>
             <Box mx={1} className="cursor">
               <Typography variant="h6" color="inherit">
-                cadastrar tema
+                Cadastrar Tema
               </Typography>
             </Box>
             <Link to= '/login' className='text-decorator-none'>
-              <Box mx={1} className="cursor" style={{color: 'white'}}> 
+              <Box mx={1} className="cursor" marginRight={120}> 
                 <Typography variant="h6" >
-                  logout
+                  Logout
                 </Typography>
               </Box>
             </Link>
@@ -47,6 +50,15 @@ function Navbar() {
       </AppBar>
     </>
   );
-}
 
+}
+//   function ImageAvatars() {
+//   return (
+//     <Stack direction="row" spacing={2}>
+//       <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+//       <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+//       <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
+//     </Stack>
+//   );
+// }
 export default Navbar;

@@ -1,10 +1,11 @@
 .imagem2{
-    background-image: url(https://images.unsplash.com/photo-1576093742342-ae7001bdc5e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=407&q=80);
+    background-image: url('../../assets/imagens/imagemCadastro2.jpg');
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
+    background-color: #F9F5F1 !important;
 }
 
 .texto2{
@@ -13,8 +14,29 @@
 
 .btnCancelar{
     margin-right: 20px !important;
+    background-color: #C78283 !important;
+}
+
+.btnCadastrar{
+    background-color: #744253 !important;
 }
 
 .text-decorator-none{
     text-decoration: none;
+}
+
+.preencher{
+    background-color: #74425329;
+}
+
+.formulario{
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+.boxcadastro{
+    /* background-color: #d7bea849; */
+    padding: 30px;
+    margin: 5px;
+    border-radius: 15px;
 }

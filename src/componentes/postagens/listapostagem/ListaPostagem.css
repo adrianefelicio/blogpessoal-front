@@ -1,0 +1,12 @@
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.cardHome{
+    background-color: #f3d9dc59 !important;
+}
+
+.postagemHome{
+    font-weight: bold !important;
+    color: #744253;
+}

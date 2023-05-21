@@ -1,12 +1,19 @@
 .navbar {
-    background-color: #3e5997 !important
+    background-color: #744253 !important;
+    color: #F9F5F1;
   }
 
 .cursor{
-  cursor: pointer
-  color white
+  cursor: pointer;
+  color: #F9F5F1;
+  ;
   
 }
 .text-decorator-none{
   text-decoration: none;
+}
+
+.nomeblog{
+  color: #F9F5F1;
+  margin-left: 1300px !important;
 }

@@ -1,10 +1,10 @@
 .footer {
-    background-color: #3e5997;
-    color: #fff;
+    background-color: #744253;
+    color: #F9F5F1;
   }
   
   .iconesFooter {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   
   .iconeInd {
@@ -14,4 +14,12 @@
   .iconeInd:hover {
     color: #bbb;
     cursor: pointer;
+  }
+
+  .itemsfooter{
+    font-size: 15px !important;
+  }
+
+  .mui{
+    font-size: 13px !important;
   }

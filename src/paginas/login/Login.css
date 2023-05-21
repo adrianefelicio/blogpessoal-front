@@ -2,11 +2,44 @@
     text-decoration: none;
 }
 
-.imagem{
-    background-image: url(https://images.unsplash.com/photo-1576093742342-ae7001bdc5e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=407&q=80);
+.imagem1{
+    background-image: url('../../assets/imagens/imagem.jpg');
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
 }
+
+.form{
+    background-color: #f9f5f1;
+}
+
+.form1{
+    font-weight:bolder !important;
+    color: black;
+}
+
+.botao{
+    background-color: #744253 !important;
+    color: #f9f5f1;
+}
+
+.cadastre{
+    font-weight: bolder !important;
+    color: #744253;
+}
+
+.cadastre:hover{
+    text-decoration: none !important;
+    color: #976D5E;
+}
+
+.preencher{
+    background-color: #744253;
+}
+
+/* .formularioLogin{
+    background-color: #D7BEA8;
+    padding: 5px;
+} */

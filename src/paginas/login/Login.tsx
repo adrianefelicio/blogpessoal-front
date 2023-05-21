@@ -50,32 +50,32 @@ function Login(){
     }
 
   return ( //direction = deixa tudo numa linha só / justifyContent='center' -> centralizar o conteúdo
-    <Grid container direction='row' justifyContent='center' alignItems='center' > 
+    <Grid container direction='row' justifyContent='center' alignItems='center' className="form" > 
       <Grid alignItems='center' xs={6}>
-        <Box paddingX={20}>
+        <Box paddingX={30} className="formularioLogin">
               <form onSubmit={onSubmit}> {/*chamando a função onSubmit*/}
-                <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' style={{fontWeight: 'bold'}}>Entrar</Typography>{/* tag para texto / variant define qual o tipo de título / gutterBottom é uma margem inferior / component serve para reforçar que se trata de um h3*/}
-                 <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id='usuario' label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth/> {/*Campo de texto - campo de usuário */}
-                  <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' fullWidth type='password'/>
+                <Typography variant='h3' gutterBottom component='h3' align='center' className="form1">Entrar</Typography>{/* tag para texto / variant define qual o tipo de título / gutterBottom é uma margem inferior / component serve para reforçar que se trata de um h3*/}
+                 <TextField className="preencher" value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id='usuario' label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth/> {/*Campo de texto - campo de usuário */}
+                  <TextField className="preencher" value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' fullWidth type='password'/>
                   <Box marginTop={2} textAlign='center'>
 
-                      <Button type='submit' variant='contained' color='primary'>
+                      <Button type='submit' variant='contained' className="botao">
                         Logar
                       </Button>
 
                   </Box>
-            </form>
+                </form>
             <Box display='flex' justifyContent='center' marginTop={2}>
               <Box marginRight={1}>
                 <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
               </Box>
                 <Link to='/cadastrousuario'>
-                <Typography variant='subtitle1' gutterBottom align='center' style={{fontWeight: 'bold'}}>Cadastre-se</Typography>
+                <Typography variant='subtitle1' gutterBottom align='center' className="cadastre">Cadastre-se</Typography>
                 </Link>
             </Box>
         </Box>
       </Grid>
-      <Grid xs={6} className="imagem">
+      <Grid xs={6} className="imagem1">
       </Grid>
       </Grid>
   )

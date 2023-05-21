@@ -1,0 +1,20 @@
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.botaoAtualizar{
+    background-color: #744253 !important;
+    color: #F9F5F1 !important;
+
+}
+
+.botaoDeletar{
+    background-color: #C78283 !important;
+    color: #F9F5F1 !important;
+}
+
+.backgroundTema{
+    background-color: #f3d9dc60 !important;
+    border-radius: 15px !important;
+    
+}

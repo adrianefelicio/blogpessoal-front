@@ -1,14 +1,15 @@
 .titulo{
   font-weight: 900px;
-  color: #385cb1;
+  color: #744253;
 }
 
 .subtitulo{
-  color: #385cb1;
+  color: black;
 }
 
 .texto {
     text-align: center;
+    color: black;
   }
   
   .alinhamento {
@@ -16,22 +17,26 @@
   }
   
   .botao{
-    border-color: white !important;
-    background-color: #385cb1 !important;
-    color: white !important;
+    border-color: #F9F5F1 !important;
+    background-color: #744253 !important;
+    color: #F9F5F1 !important;
   }
 
   
 .botao:hover {
-    background-color: white!important;
-    color:#385cb1 !important
+    background-color: #976D5E!important;
+    color: white !important
   }
 
   .caixa {
-    background-color: "#385cb1";
+    background-color: "#744253";
   }
 
   .postagens{
-    background-color: white;
+    background-color: #F9F5F1;
   }
-  
+
+.imagemHome{
+    background-image: url('../../assets/imagens/imagem.jpg');
+    margin-left: 200px !important;
+}
