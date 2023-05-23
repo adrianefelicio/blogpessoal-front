@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import TabPostagem from "../../componentes/postagens/tabpostagem/TabPostagem";
+import imagemHome from '../../assets/imagens/imagemHome.jpg';
 
 function Home() {
   return (

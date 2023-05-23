@@ -4,16 +4,16 @@
   }
 
 .cursor{
+  justify-content: end;
   cursor: pointer;
-  color: #F9F5F1;
-  ;
-  
+  color: #F9F5F1; 
+  margin-top: 20px;
+  margin-bottom: -20px;
 }
 .text-decorator-none{
   text-decoration: none;
 }
 
 .nomeblog{
-  color: #F9F5F1;
-  margin-left: 1300px !important;
+  color: #F9F5F1;;
 }

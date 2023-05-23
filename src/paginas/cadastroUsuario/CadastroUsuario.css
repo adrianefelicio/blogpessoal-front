@@ -1,5 +1,5 @@
 .imagem2{
-    background-image: url('../../assets/imagens/imagemCadastro2.jpg');
+    background-image: url('../../assets/imagens/imagem4.jpg');
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
@@ -17,8 +17,19 @@
     background-color: #C78283 !important;
 }
 
+.btnCancelar:hover{
+    background-color: #976D5E !important;
+    color: #F9F5F1 !important;
+}
+
+
 .btnCadastrar{
     background-color: #744253 !important;
+}
+
+.btnCadastrar:hover{
+    background-color: #976D5E !important;
+    color: #F9F5F1 !important;
 }
 
 .text-decorator-none{

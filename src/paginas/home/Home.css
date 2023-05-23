@@ -36,7 +36,11 @@
     background-color: #F9F5F1;
   }
 
-.imagemHome{
-    background-image: url('../../assets/imagens/imagem.jpg');
-    margin-left: 200px !important;
+  .imagemHome{
+    background-image: url('../../assets/imagens/imagem.jpg') !important;
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
