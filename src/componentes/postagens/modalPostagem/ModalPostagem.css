@@ -1,0 +1,8 @@
+.cursor{
+     cursor: pointer;  /*transforma o mouse em uma mãozinha  */
+}
+
+.btnModal{
+    border-color: white !important;
+    background-color: white !important;
+}

@@ -13,6 +13,8 @@ import { Box } from "@mui/material";
 import "./ListaPostagem.css";
 import useLocalStorage from "react-use-localstorage";
 import { useNavigate } from "react-router-dom";
+import CardMedia from "@mui/material/CardMedia";
+import { CardActionArea } from "@mui/material";
 
 function ListaPostagem() {
     const [posts, setPosts] = useState<Postagem[]>([]);
@@ -41,53 +43,61 @@ function ListaPostagem() {
     return (
     <>
         {posts.map((post) => (
-        <Box m={2}>
-            <Card variant="outlined">
-            <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                Postagens
-                </Typography>
-                <Typography variant="h5" component="h2">
-                {post.titulo}
-                </Typography>
-                <Typography variant="body2" component="p">
-                {post.texto}
-                </Typography>
-                <Typography variant="body2" component="p">
-                {post.tema?.descricao}
-                </Typography>
-            </CardContent>
-            <CardActions>
-                <Box display="flex" justifyContent="center" mb={1.5}>
-                <Link
-                    to={`/formularioPostagem/${post.id}`}
-                    className="text-decorator-none"
+            <Box style={{ maxWidth: 345, height: 220}}>
+    <Card>
+    <CardActionArea>
+    <CardMedia
+        component="img"
+        height="140"
+        image="/static/images/cards/contemplative-reptile.jpg"
+        alt="green iguana"
+    />
+    <CardContent>
+        <Typography color="textSecondary" gutterBottom>
+        Postagens
+        </Typography>
+        <Typography gutterBottom variant="h5" component="div">
+        {post.titulo}
+        </Typography>
+        <Typography variant="body2">
+        {post.texto}
+        </Typography>
+        <Typography variant="body2" component="p">
+        {post.tema?.descricao}
+        </Typography>
+    </CardContent>
+    <CardActions>
+            <Box >
+            <Link
+                to={`/formularioPostagem/${post.id}`}
+                className="text-decorator-none"
+            >
+                <Box mx={1}>
+                <Button
+                    variant="contained"
+                    className="marginLeft"
+                    size="small"
+                    color="primary"
                 >
-                    <Box mx={1}>
-                    <Button
-                        variant="contained"
-                        className="marginLeft"
-                        size="small"
-                        color="primary"
-                    >
-                        atualizar
-                    </Button>
-                    </Box>
-                </Link>
-                <Link
-                    to={`/deletarPostagem/${post.id}`}
-                    className="text-decorator-none"
-                >
-                    <Box mx={1}>
-                    <Button variant="contained" size="small" color="secondary">
-                        deletar
-                    </Button>
-                    </Box>
-                </Link>
+                    atualizar
+                </Button>
                 </Box>
-            </CardActions>
-            </Card>
-        </Box>
+            </Link>
+            <Link
+                to={`/deletarPostagem/${post.id}`}
+                className="text-decorator-none"
+            >
+                <Box mx={1}>
+                <Button variant="contained" size="small" color="secondary">
+                    deletar
+                </Button>
+                </Box>
+            </Link>
+            </Box>
+        </CardActions>
+    </CardActionArea>
+</Card>
+</Box>
         ))}
     </>
     );

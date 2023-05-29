@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import TabPostagem from "../../componentes/postagens/tabpostagem/TabPostagem";
 import imagemHome from '../../assets/imagens/imagemHome.jpg';
+import ModalPostagem from "../../componentes/postagens/modalPostagem/ModalPostagem";
+import { useNavigate } from "react-router-dom";
+import useLocalStorage from "react-use-localstorage";
 
 function Home() {
+
+    let history = useNavigate();
+    const [token, setToken] = useLocalStorage('token'); 
+//observa se há um token salvo, se sim, estará logado, se nao, aparece a mensagem 
+    useEffect(() => {
+      if(token == ""){
+        alert("Você precisa estar logado")
+        history("/login")
+      }
+    })
+
   return (
     <Grid
       container
@@ -31,6 +45,9 @@ function Home() {
           <Button variant="outlined" className="botao">
             Ver Postagens
           </Button>
+        </Box>
+        <Box marginRight={1}>
+          <ModalPostagem/>
         </Box>
       </Grid>
       <Grid item xs={6} className="imagemHome">
