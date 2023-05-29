@@ -3,21 +3,31 @@ import './Login.css'
 import { Grid, Box, Typography, TextField, Button } from '@mui/material'
 import { Link, useNavigate } from 'react-router-dom'
 import UserLogin from '../../models/UserLogin'
-import useLocalStorage from 'react-use-localstorage'
 import { login } from '../../services/Service'
 import Imagem from '../../assets/imagens/imagem.jpg'
+import { useDispatch } from 'react-redux'
+import { addToken } from '../../store/tokens/actions'
 
 function Login(){
   let history = useNavigate();
-  const [token, setToken] = useLocalStorage('token'); //faz o controle do token dentro do localStorage
+  const dispatch = useDispatch();
+  const [token, setToken] = useState(''); //faz o controle do token dentro do localStorage
   const[userLogin, setUserLogin] = useState<UserLogin>({
 
     id: 0,          //valores zerados, pois não foi feito nenhum cadastro/login
     usuario: '',
     senha: '',
     token: ''
-  }
-    )
+  });
+
+  // const [respUsuarioLogin, setRespUsuarioLogin] = useState<UserLogin>({
+  //   id: 0,
+  //   nome: '',
+  //   usuario: '',
+  //   senha: '',
+  //   foto: '',
+  //   token: '',
+  // });
 
     function updatedModel(e: ChangeEvent<HTMLInputElement>){
 
@@ -31,7 +41,8 @@ function Login(){
     }
 
     useEffect(()=>{                 //É responsável por fazer o controle de ciclo de vida de um componente
-        if (token != ''){           //verificar se o token está ou não vazio
+        if (token != ''){ //verificar se o token está ou não vazio
+          dispatch(addToken(token))
           history('/home')
         }                
     }, [token])                           

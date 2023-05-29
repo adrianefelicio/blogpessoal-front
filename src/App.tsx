@@ -12,11 +12,14 @@ import CadastroPost from './componentes/postagens/cadastroPost/CadastroPost';
 import CadastroTema from './componentes/temas/cadastroTema/CadastroTema';
 import DeletarPostagem from './componentes/postagens/deletarPostagem/DeletarPostagem';
 import DeletarTema from './componentes/temas/deletarTema/DeletarTema';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 
 function App() {
 
   return(
+    <Provider store={store}>
     <Router>
       <Navbar />
       <div style={{ minHeight: '100vh' }}>  {/*altura mínima para o container, ou seja os elementos que estão nessa div ocuparão esse espaço */}
@@ -38,6 +41,7 @@ function App() {
     </div>
     <Footer />
     </Router>
+    </Provider>
         );
 }
 

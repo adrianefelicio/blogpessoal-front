@@ -1,16 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import TabPostagem from "../../componentes/postagens/tabpostagem/TabPostagem";
 import imagemHome from '../../assets/imagens/imagemHome.jpg';
 import ModalPostagem from "../../componentes/postagens/modalPostagem/ModalPostagem";
-import { useNavigate } from "react-router-dom";
-import useLocalStorage from "react-use-localstorage";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../store/tokens/tokensReducer";
+import Postagem from "../../models/Postagem";
+
 
 function Home() {
-
+    const [posts, setPosts] = useState<Postagem[]>([])
     let history = useNavigate();
-    const [token, setToken] = useLocalStorage('token'); 
+    const token = useSelector<TokenState, TokenState["tokens"]>( //é esse useSelector que vai acessar o store pegar o token e atribuir a essa constante
+      (state) => state.tokens
+    );
 //observa se há um token salvo, se sim, estará logado, se nao, aparece a mensagem 
     useEffect(() => {
       if(token == ""){
@@ -42,9 +47,9 @@ function Home() {
           <Typography className="subtitulo" align="center" variant="body1">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum minima dolorem ab libero omnis, pariatur nisi veniam eius autem laboriosam. Voluptates quas dolor tempore natus eveniet consectetur deleniti eligendi porro.
           </Typography>
-          <Button variant="outlined" className="botao">
-            Ver Postagens
-          </Button>
+          <Link to= "/posts">
+          <Button variant="outlined" className="botao">Ver Postagens</Button>
+          </Link>
         </Box>
         <Box marginRight={1}>
           <ModalPostagem/>
