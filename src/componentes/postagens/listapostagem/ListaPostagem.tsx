@@ -102,7 +102,8 @@ function ListaPostagem() {
     </CardActionArea>
 </Card>
 </Box>
-        ))}
+        ))
+        }
     </>
     );
 }
