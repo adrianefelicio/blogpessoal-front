@@ -80,4 +80,5 @@ function DeletarPostagem() {
     </>
   );
 }
+toast.info
 export default DeletarPostagem;
